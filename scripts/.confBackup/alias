@@ -1,0 +1,33 @@
+#personal alias
+#--backup .scripts/ to drive.code/
+alias scriptsBackup='rm -r /home/fejfar/drive.code/linux/.scripts && cp -r /home/fejfar/.scripts /home/fejfar/drive.code/linux && echo Done!'
+#--add actual folder to /etc/profile and make a backup in .scripts/
+alias addtopath='sudo sh -c "/home/fejfar/.scripts/addPath >> /etc/profile" && pathsBackup && echo Done!'
+#--add ~/.scripts/addAlias output to .bashrc 
+alias addtoalias='sh /home/fejfar/.scripts/addAlias && sublime /home/fejfar/.bashrc & echo Done!'
+#--make a backup from all custom aliases
+alias aliasBackup='cat /home/fejfar/.bashrc | sed -n '110,+110p' > /home/fejfar/.scripts/.confBackup/alias && echo Done!'
+#--make a backup from all custom paths
+alias pathsBackup='cat /etc/profile | sed -n '32,+32p' > /home/fejfar/.scripts/.confBackup/paths && echo Done!'
+#--all backups in one
+alias allbackups='aliasBackup && pathsBackup && scriptsBackup && echo Done! && showBackups'
+#--java study stuff
+alias study_java='pdf /home/fejfar/drive.fejfar/Books/Programacao/Java/pdf/SCJP-KathySierra.pdf && nemo /home/fejfar/drive.code/largerMedia/SoftBlue'
+#--android study stuff
+alias study_android='eclipse_adt & nemo /home/fejfar/drive.code/largerMedia/Cursos/SoftBlue/Android/Aulas && totem /home/fejfar/drive.code/largerMedia/Cursos/SoftBlue/Android/Aulas/Playlist.pls &'
+#--Show backups
+alias showBackups='cat /home/fejfar/.scripts/.confBackup/*'
+#--Minecraft
+alias minecraft='/home/fejfar/.scripts/minecraftLauncher && cp -r /home/fejfar/Games/Minecraft/* /home/fejfar/drive.media/Games/Minecraft/ && cp -r /home/fejfar/.minecraft/saves /home/fejfar/.minecraft/screenshots /home/fejfar/drive.media/Games/Minecraft && echo Files synchronized!'
+#--Minecraft server
+alias serverminecraft='cd /home/fejfar/Games/Minecraft/server/ && java -Xms2048M -Xmx2048M -jar minecraft_server.1.7.10.jar nogui && cp -r /home/fejfar/Games/Minecraft/server /home/fejfar/drive.media/Games/Minecraft/ && echo Server files synchronized!'
+#--backup home folder into hd
+alias backuphome='cp -ruv /home/fejfar/* /media/fejfar/hd/'
+#--setup xbox controller to play minecraft
+alias xbox='sudo rmmod xpad; sudo xboxdrv -c /home/fejfar/Games/Minecraft/utils/minecraft.xboxdrv --silent'
+#--open popcorn time
+alias popcorntime='Popcorn-Time'
+
+alias deploy='cp -rv /home/fejfar/drive.code/Codigos/workspaces/workTrainning/simpleTrainning/target/work.war /home/fejfar/Programs/jboss-as-7.1.1.Final/standalone/deployments'
+
+alias ufscarAppbackupInServer='cp -ruv /home/fejfar/drive.code/Codigos/workspaces/InGreen /run/user/1000/gvfs/smb-share:server=ingreen-srv1,share=ingreen/DevelopUFSCAR/ && echo DONE!'

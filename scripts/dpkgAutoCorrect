@@ -1,0 +1,17 @@
+echo ">>> Erasing .../dpkg/info/*"
+sudo rm -r /var/lib/dpkg/info/* 
+echo ">"
+echo ">"
+echo ">" 
+echo ">>> Cleaning apt..."
+sudo apt-get clean
+echo ">"
+echo ">"
+echo ">"
+echo ">>> Cleaning installation files...."
+sudo apt-get install -f
+echo ">"
+echo ">"
+echo ">"
+echo ">>> Let's update this shit!"
+sudo apt-get update 

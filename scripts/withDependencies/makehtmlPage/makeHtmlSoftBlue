@@ -1,0 +1,17 @@
+#!/bin/bash
+
+rm *
+
+listadirsSB-HTML
+
+sbformat
+
+listadirsNovoSB-HTML
+
+cp /home/fejfar/.scripts/withDependencies/makehtmlPage/PageMaker098012934192384671.class .
+
+java PageMaker098012934192384671 $*
+
+rm PageMaker098012934192384671.class
+
+exit

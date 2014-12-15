@@ -1,0 +1,63 @@
+#!/bin/bash
+
+if [[ ! -d $HOME/.stdybuddy ]]; then
+	mkdir $HOME/.stdybuddy
+	mkdir $HOME/.stdybuddy/classes
+fi
+
+echo " "
+
+case $1 in
+	"--help")
+cat stdy_help
+;;
+
+
+"-list") 
+if [[ ! -f $HOME/.stdybuddy/stdy_list ]]; then
+	echo "[stdy] Nothing in your lessons list yet!"
+fi
+
+if [[ -f $HOME/.stdybuddy/stdy_list ]]; then
+	cat $HOME/.stdybuddy/stdy_list
+fi
+;;
+
+
+"-create")
+if [[ ! -d $HOME/.stdybuddy/$2 ]]; then
+	mkdir $HOME/.stdybuddy/classes/$2
+fi
+
+if grep -Fxq $2 $HOME/.stdybuddy/stdy_list ; then
+	echo "[stdy] Lesson exist!"
+else
+	echo $2 >> $HOME/.stdybuddy/stdy_list
+	echo "[stdy] Lesson created!"
+fi
+;;
+
+"-add")
+echo $2 >> $HOME/.stdybuddy/classes/$3/$3_videos
+;;
+
+"-play")
+totem $HOME/.stdybuddy/$2/$2_videos
+;;
+
+"-c")
+#continue
+;;
+
+"-p")
+#last video
+;;
+
+
+
+
+esac
+
+
+
+echo " "

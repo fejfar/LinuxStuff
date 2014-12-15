@@ -1,0 +1,10 @@
+export PATH=$PATH:/home/fejfar/.scripts/withDependencies/makehtmlPage
+export PATH=$PATH:/home/fejfar/.scripts/withDependencies/javaStudy
+export PATH=$PATH:/home/fejfar/.scripts/withDependencies
+export PATH=$PATH:/home/fejfar/.scripts
+
+export PATH=$PATH:/opt/MasterPDFEditor
+export PATH=$PATH:/opt/adt-luna/eclipse
+
+export PATH=$PATH:/opt/genymotion/genymotion
+export PATH=$PATH:/opt/Popcorn-Time

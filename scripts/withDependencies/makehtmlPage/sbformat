@@ -1,0 +1,35 @@
+#!/bin/bash
+# testing variables
+cp /home/fejfar/.scripts/withDependencies/makehtmlPage/IndexTaker918273913754871574670213.class .
+
+var1=$(java IndexTaker918273913754871574670213)
+var2=1
+
+sleep 2
+for file in ./*
+do
+	mv Aula\ \#$var1.$var2* $var1.$var2
+	var2=$[$var2+1]
+done
+var2=1
+for file in ./*
+do
+	mv Download\ \#$var2* dow$var2
+	var2=$[$var2+1]
+done
+var2=1
+for file in ./*
+do
+	mv $var1.$var2/*.mp4 $var1.$var2/video.mp4
+	var2=$[$var2+1]
+done
+
+for file in ./*
+do
+	vari = 0
+	mv dow$vari/*.pdf dow$vari/slide.pdf
+	vari=$[$vari+1]
+done
+
+rm IndexTaker918273913754871574670213.class
+exit

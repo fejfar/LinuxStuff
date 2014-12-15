@@ -1,0 +1,35 @@
+#!/bin/bash
+
+echo " "
+case $1 in
+
+"md5") var=$(md5sum $2)
+echo "File md5sum: $var"
+;;
+"sha1") var=$(sha1sum $2)
+echo "file sha1sum: $var"
+;;
+"sha256") var=$(sha256sum $2)
+echo "file sha256sum: $var"
+;;
+*) echo "checksum [md5 (or sha1 or sha256)] [file] [expected sum]"
+exit 1
+;;
+
+esac
+
+echo "Your Sum Is: $3"
+
+echo " "
+echo " "
+
+case $var in
+	"$3"*)echo "> > > > > > The file is ok!"
+;;
+*)echo "> > > > > > THE SUMS DO NOT MATCH!"
+;;
+
+esac
+
+echo " "
+echo " "

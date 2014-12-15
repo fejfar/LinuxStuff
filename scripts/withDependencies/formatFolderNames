@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cp /home/fejfar/.scripts/withDependencies/FormatNames91823742112347912874928.class .
+
+for file in ./*
+do
+	var=$(java FormatNames91823742112347912874928 $file)
+	if [ -d "$file" ]
+		then
+		mv "$file" "$var"
+	fi
+	
+done
+
+rm FormatNames91823742112347912874928.class
+
+exit

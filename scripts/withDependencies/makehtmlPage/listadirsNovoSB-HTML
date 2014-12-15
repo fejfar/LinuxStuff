@@ -1,0 +1,15 @@
+#!/bin/bash
+
+mkdir .oldFolderNames
+
+
+for file in .*
+do
+	if [ -d "$file" ]
+		then
+		ls $file/ > $file/.oldFolderNames/novoNomes.txt
+	fi
+
+done
+
+exit

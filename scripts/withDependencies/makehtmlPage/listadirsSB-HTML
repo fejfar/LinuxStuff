@@ -1,0 +1,21 @@
+#!/bin/bash
+
+mkdir .oldFolderNames
+
+for file in .*
+do
+	if [ -d "$file" ]
+		then
+		if [ -f .oldFolderNames/"nomes.txt" ]
+			then
+			echo "file nomes.txt already found!"
+
+		else
+			echo "nomes.txt created"
+			ls $file/ > $file/.oldFolderNames/nomes.txt
+		fi
+	fi
+
+done
+
+exit

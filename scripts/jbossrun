@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sh /home/fejfar/Programs/jboss-as-7.1.1.Final/bin/standalone.sh

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+dir=$(pwd)
+
+ret="ex""port PA""TH=""$""PA""TH:"$dir
+
+echo $ret

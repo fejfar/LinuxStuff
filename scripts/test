@@ -1,0 +1,21 @@
+#!/bin/bash
+
+var=$1
+
+tamanho=$( echo ${#var} )
+
+boo=1
+
+while [ $boo -eq 1 ]
+do
+	if [ $tamanho -lt 8 ]
+	then
+		echo 'senha errada!'
+
+		read var
+
+		tamanho=$( echo ${#var} )
+	else
+		boo=0
+	fi
+done

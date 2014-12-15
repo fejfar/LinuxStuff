@@ -1,0 +1,65 @@
+#!/bin/bash
+
+count=0 
+
+for file in .*
+do
+	if [ -d "$file" ]
+		then
+		if [ -d ../bin/ ]
+			then
+			if [ $count == 0 ]
+				then
+				# echo ">>> bin folder already found!"
+				# echo ""
+				count=$[$count+1]
+			fi
+		else
+			# echo ">>> Creating bin folder"
+			# echo ""
+			mkdir ../bin
+		fi
+	fi
+
+done
+
+fileName=$(echo $1 | cut -d "." -f 1)
+
+# echo ">>> Compiling source..."
+# echo ""
+
+javac "$1"
+
+# echo ">>> Done!"
+# echo ""
+
+# echo ">>> Running code (runtime exception?)..."
+# echo ""
+
+# echo ":::::::::::::::"
+# echo "::Java output::"
+# echo ":::::::::::::::"
+# echo ""
+
+
+java "$fileName"
+
+
+# echo ""
+# echo ":::::::::::::::"
+# echo "::::::END::::::"
+# echo ":::::::::::::::"
+# echo ""
+# echo ""
+# echo ""
+
+# echo ">>> Actualizing binaries..."
+# echo ""
+
+
+mv $fileName.class ../bin/
+
+# echo ">>> END SCRIPT <<<"
+
+
+exit

@@ -1,0 +1,16 @@
+StudyBuddy command guide:
+
+$ stdy [command] 'classname'
+
+Command:			Description:
+
+-list				show the list of classes
+-create 			create a class (stdy [class names] [class videos])
+-c 					continue class stoped
+-l                 	show last class
+-add				add video to created class 
+					stdy -add 'videoName' 'className'
+
+
+
+Created by fejfar.code@gmail.com

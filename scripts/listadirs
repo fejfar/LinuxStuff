@@ -1,0 +1,12 @@
+#!/bin/bash
+
+for file in .*
+do
+	if [ -d "$file" ]
+		then
+		ls $file/ > $file/nomes.txt
+	fi
+
+done
+
+exit

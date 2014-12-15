@@ -1,0 +1,26 @@
+>>> bin folder already found!
+
+>>> Compiling source...
+
+>>> Done!
+
+>>> Running code (runtime exception?)...
+
+:::::::::::::::
+::Java output::
+:::::::::::::::
+
+Testing...
+Testing...
+Testing...
+Cool!
+
+:::::::::::::::
+::::::END::::::
+:::::::::::::::
+
+
+
+>>> Actualizing binaries...
+
+>>> END SCRIPT <<<

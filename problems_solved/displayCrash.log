@@ -1,0 +1,43 @@
+ls
+cd ../
+ls
+ls
+xterm
+gnome-terminal
+export DISPLAY=:0
+gnome-terminal
+bg
+icewm &
+fg
+fg
+killall   X
+killall   Xorg
+ping google.com
+sudo apt-get instal icewm
+sudo apt-get install icewm
+X
+export DISPLAY=:0
+s
+export DISPLAY=:0
+X &
+icewm &
+fg
+fg
+gdm
+sudo apt-get install gdm
+reboot
+sudo reboot
+gdm
+sudo gdm
+cd /var/log/
+ls
+cat /etc/profile
+vim $_
+sudo reboot
+sudo dpkg-reconfigure gdm
+sudo dpkg-reconfigure gdm
+sudo apt-get remove gdm
+sudo dpkg-reconfigure mdm
+sudo apt-get install mdm
+sudo dpkg-reconfigure mdm
+sudo reboot

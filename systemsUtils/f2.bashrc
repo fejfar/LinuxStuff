@@ -2,6 +2,33 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+#f.bashrc file
+# enable color support of ls and also add handy aliases
+#if [ "$TERM" != "dumb" ]; then
+#   eval "`dircolors -b`"
+#   alias ls='ls --color=auto'
+#   alias dir='ls --color=auto --format=vertical'
+#   alias vdir='ls --color=auto --format=long'
+#fi
+
+alias l='ls -lah'
+
+# 1)
+
+PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[m\]\[\e[1;32m\]\$ \[\e[m\]\[\e[1;37m\] '
+
+# 2)
+
+# PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$
+# \[\e[m\]\[\e[0;32m\] '
+
+# 3)
+
+# PS1='\[\033[1;33m\]\u\[\033[1;37m\]@\[\033[1;32m\]\h\[\033[1;37m\]:\[\033[1;31m\]\w \[\033[1;36m\]\$ \[\033[0m\]'
+
+alias ls='ls --color=tty -F -b -T 0'
+
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -112,7 +139,7 @@ fi
 alias scriptsBackup='rm -r /home/fejfar/drive.code/linux/.scripts && cp -r /home/fejfar/.scripts /home/fejfar/drive.code/linux && echo Done!'
 #--add actual folder to /etc/profile and make a backup in .scripts/
 alias addtopath='sudo sh -c "/home/fejfar/.scripts/addPath >> /etc/profile" && pathsBackup && echo Done!'
-#--add ~/.scripts/addAlias output to .bashrc 
+#--add ~/.scripts/addAlias output to .bashrc
 alias addtoalias='sh /home/fejfar/.scripts/addAlias && sublime /home/fejfar/.bashrc & echo Done!'
 #--make a backup from all custom aliases
 alias aliasBackup='cat /home/fejfar/.bashrc | sed -n '110,+110p' > /home/fejfar/.scripts/.confBackup/alias && echo Done!'
